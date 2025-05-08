@@ -7,7 +7,7 @@ const Experience = () => {
       title: 'Remote Software Developer',
       company: 'Freelance',
       dates: '2023 – Present',
-      description: 'Designed and built custom websites and applications using React, JavaScript, and PHP, crafting solutions that aligned closely with each client’s unique goals. From concept to launch, I collaborated directly with clients to ensure every project was not only functional but thoughtfully tailored to their vision. This experience deepened my understanding of user-focused design and reinforced the value of clear, collaborative communication in development.',
+      description: 'Built a variety of personal projects using React, JavaScript, and PHP, focusing on developing practical, user-friendly solutions. These projects helped me strengthen my understanding of full-stack development, user-centered design, and the importance of thoughtful, clear communication when building applications.',
     },
     {
       title: 'Junior Web Developer',

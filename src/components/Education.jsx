@@ -47,97 +47,100 @@ const Education = () => {
     },
   ];
 
-  const [cardTops, setCardTops] = useState(() => {
-    const windowHeight = window.innerHeight;
-    return [windowHeight, windowHeight, windowHeight]; // Start just below the viewport
-  });
-  const sectionRef = useRef(null);
-  const containerRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const timeoutRef = useRef(null);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? education.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev === education.length - 1 ? 0 : prev + 1));
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current || !containerRef.current) return;
-
-      const sectionTop = sectionRef.current.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      // Calculate scroll progress within the section
-      const scrollProgress = Math.max(0, windowHeight - sectionTop);
-
-      // Sequential movement with adjusted timing
-      const initialDelay = 200; // Delay before Card 1 starts moving
-      const scrollPerCard = 200; // Scroll distance per card
-      const headingHeight = 60; // Estimated heading height (text-4xl + padding)
-      const baseTop = headingHeight + 20; // Base top position for Card 1 (below heading)
-
-      const tops = education.map((_, index) => {
-        const startScroll = initialDelay + index * scrollPerCard; // Card 1: 200px, Card 2: 400px, Card 3: 600px
-        const endScroll = initialDelay + (index + 1) * scrollPerCard; // Card 1: 400px, Card 2: 600px, Card 3: 800px
-        const finalTop = baseTop + index * 30; // Final position: Card 1: 80px, Card 2: 110px, Card 3: 140px
-
-        if (scrollProgress < startScroll) {
-          // Before this card's scroll range: keep it just below the viewport
-          return windowHeight;
-        } else if (scrollProgress >= startScroll && scrollProgress <= endScroll) {
-          // Within this card's scroll range: move it up to final position
-          const progress = (scrollProgress - startScroll) / scrollPerCard;
-          const newTop = windowHeight - progress * (windowHeight - finalTop);
-          return Math.max(newTop, finalTop); // Ensure it doesn't go above finalTop
-        } else {
-          // After this card's scroll range: lock it in final position
-          return finalTop;
-        }
-      });
-
-      setCardTops(tops);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call to set positions
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    if (!isHovered) {
+      timeoutRef.current = setTimeout(() => {
+        goToNext();
+      }, 3000);
+    }
+    return () => clearTimeout(timeoutRef.current);
+  }, [currentIndex, isHovered]);
 
   return (
     <FadeUp>
-      <section id="education" ref={sectionRef} className="max-w-5xl mx-auto text-light-grey">
+      <section id="education" className="max-w-5xl mx-auto text-light-grey py-8">
         <style>
           {`
-            .education-section {
-              position: sticky;
-              top: 60px; /* Account for navbar height */
-              min-height: 100vh; /* Ensure the section takes up the viewport */
-              height: 450px; /* Adjusted height: heading (60px) + Card 3 top (140px) + card height (~300px) - reduced buffer */
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-            .education-heading {
-              width: 100%;
-              max-width: 1280px; /* Match max-w-5xl */
-              text-align: center;
-              background: inherit;
-              z-index: 10;
-              padding: 1rem 0;
-            }
-            .education-container {
+            .carousel-container {
               position: relative;
               width: 100%;
-              height: 100%;
+              height: 400px;
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
-            .education-card {
-              position: absolute; /* Position relative to the section */
-              left: 50%;
-              transform: translateX(-50%);
+            .carousel-card {
+              position: absolute;
               width: 100%;
               max-width: 800px;
               opacity: 0;
-              transition: opacity 0.5s ease, top 0.5s ease;
+              transform: translateX(-100%) translateY(50%);
+              transition: opacity 0.5s ease, transform 0.5s ease;
+              display: none;
+              pointer-events: none;
             }
-            .education-card.visible {
+            .carousel-card.incoming {
+              display: flex;
+              opacity: 0;
+              transform: translateX(-100%) translateY(50%);
+              pointer-events: none;
+              z-index: 4;
+            }
+            .carousel-card.active {
+              display: flex;
               opacity: 1;
+              transform: translateX(0) translateY(0);
+              pointer-events: auto;
+              z-index: 5;
+            }
+            .carousel-card.exit {
+              display: flex;
+              opacity: 0;
+              transform: translateX(100%) translateY(-50%);
+              pointer-events: none;
+              z-index: 4;
+            }
+            .arrow {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              background: rgba(26, 38, 52, 0.8);
+              border: 2px solid transparent;
+              background: linear-gradient(rgba(26, 38, 52, 0.8), rgba(26, 38, 52, 0.8)) padding-box,
+                          linear-gradient(45deg, #3B82F6, #A855F7) border-box;
+              color: white;
+              width: 36px;
+              height: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 24px;
+              border-radius: 50%;
+              cursor: pointer;
+              z-index: 10;
+              transition: box-shadow 0.3s ease;
+            }
+            .arrow:hover {
+              box-shadow: 0 0 8px 2px rgba(113, 107, 246, 0.5);
+            }
+            .arrow-left {
+              left: 45px;
+            }
+            .arrow-right {
+              right: 45px;
             }
             .education-button {
               background: rgba(26, 38, 52, 0.8);
@@ -152,23 +155,36 @@ const Education = () => {
             }
           `}
         </style>
-        <div className="education-section">
-          <h2 className="text-4xl font-bold text-center education-heading">Education & Courses</h2>
-          <div className="education-container" ref={containerRef}>
-            {education.map((edu, index) => (
+        <h2 className="text-4xl font-bold text-center mb-8">Education & Courses</h2>
+        <div className="carousel-container">
+          <div className="arrow arrow-left" onClick={goToPrevious}>←</div>
+          {education.map((edu, index) => {
+            let cardClass = 'carousel-card';
+            if (index === currentIndex) {
+              cardClass += ' active';
+            } else if (index === (currentIndex - 1 + education.length) % education.length) {
+              cardClass += ' exit';
+            } else if (index === (currentIndex + 1) % education.length) {
+              cardClass += ' incoming';
+            }
+            return (
               <div
                 key={index}
-                className={`bg-card-bg rounded-lg p-6 flex flex-col md:flex-row border-2 border-transparent shadow-lg education-card ${cardTops[index] <= window.innerHeight - 50 ? 'visible' : ''}`}
+                className={`bg-card-bg rounded-lg p-6 flex flex-col md:flex-row border-2 border-transparent shadow-lg ${cardClass}`}
                 style={{
                   background:
                     'linear-gradient(#1A2634, #1A2634) padding-box, linear-gradient(45deg, #3B82F6, #A855F7) border-box',
-                  top: `${cardTops[index]}px`, // Position relative to the section
-                  zIndex: index, // Card 3 in front, Card 1 at back
                 }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               >
                 <div className="md:w-3/4">
                   <h3 className="text-xl font-semibold text-white text-left">{edu.degree}</h3>
-                  {edu.institution && <p className="text-sm text-light-grey text-left">{edu.institution} | {edu.period}</p>}
+                  {edu.institution && (
+                    <p className="text-sm text-light-grey text-left">
+                      {edu.institution} | {edu.period}
+                    </p>
+                  )}
                   {edu.courses && (
                     <ul className="list-disc list-inside mt-2 text-light-grey">
                       {edu.courses.map((course, i) => (
@@ -193,11 +209,16 @@ const Education = () => {
                   </a>
                 </div>
                 <div className="md:w-1/4 flex justify-center items-center mt-4 md:mt-0">
-                  <img src={edu.logo} alt={`${edu.institution || 'Udemy'} Logo`} className="w-26 h-26 object-contain" />
+                  <img
+                    src={edu.logo}
+                    alt={`${edu.institution || 'Udemy'} Logo`}
+                    className="w-26 h-26 object-contain"
+                  />
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
+          <div className="arrow arrow-right" onClick={goToNext}>→</div>
         </div>
       </section>
     </FadeUp>

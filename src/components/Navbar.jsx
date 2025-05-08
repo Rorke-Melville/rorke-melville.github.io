@@ -26,9 +26,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full z-10 transition-all duration-300"
+      className="fixed top-0 left-0 w-full z-50 transition-all duration-300" 
       style={{
-        background: `linear-gradient(to bottom, rgba(17, 28, 47, ${opacity}), rgba(29, 19, 43, ${opacity}))`,
+        background: `linear-gradient(to bottom, rgba(0, 0, 0, ${opacity}), rgba(27, 28, 47, ${opacity}))`,
         boxShadow: opacity > 0 ? `0 4px 6px -1px rgba(0, 0, 0, ${opacity})` : 'none',
       }}
     >

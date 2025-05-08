@@ -32,8 +32,8 @@ const CanvasBackground = () => {
     const animate = () => {
       // Clear canvas and redraw gradient
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, '#111c2f'); // Dark blue at the top
-      gradient.addColorStop(1, '#1d132b'); // Dark purple at the bottom
+      gradient.addColorStop(0, '#000000'); // Black at the top
+      gradient.addColorStop(1, '#111c2f'); // Dark blue at the bottom
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 

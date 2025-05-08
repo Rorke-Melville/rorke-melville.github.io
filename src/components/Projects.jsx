@@ -12,8 +12,8 @@ import After10 from './assets/after10.png';
 const Projects = () => {
   const sliders = [
     { before: Before, after: After1, id: 'slider1' },
-    { before: Before1, after: After2, id: 'slider2' },
-    { before: Before2, after: After3, id: 'slider3' },
+    //{ before: Before1, after: After2, id: 'slider2' },
+    //{ before: Before2, after: After3, id: 'slider3' },
     { before: Before4, after: After10, id: 'slider4' },
   ];
 
@@ -48,7 +48,7 @@ const Projects = () => {
         <div className="space-y-8">
           {sliders.map((slider, index) => (
             <div key={index} className={`before-after-slider ${slider.id}`}>
-              <div className="relative w-full h-64">
+              <div className="relative w-full h-96">
                 <input
                   type="range"
                   min="0"
@@ -58,13 +58,8 @@ const Projects = () => {
                   data-target={slider.id}
                 />
                 <div className="relative w-full h-full">
-                  <img src={slider.before} alt="Before" className="absolute w-full h-full object-cover" />
-                  <img
-                    src={slider.after}
-                    alt="After"
-                    className={`absolute w-full h-full object-cover after-image`}
-                    style={{ clipPath: 'inset(0 50% 0 0)' }}
-                  />
+                  <img src={slider.before} alt="Before" className="absolute w-full h-full object-cover rounded-[8px]" />
+                  <img src={slider.after}  alt="After" className={`absolute w-full h-full object-cover after-image rounded-[8px]`} style={{ clipPath: 'inset(0 50% 0 0)' }} />
                 </div>
               </div>
             </div>
