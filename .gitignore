@@ -1,4 +1,3 @@
 .qodo/
-build/
 .env
 node_modules/
