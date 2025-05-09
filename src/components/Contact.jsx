@@ -58,7 +58,15 @@ const Contact = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-6 py-3 bg-dark-red text-white rounded-lg hover:bg-light-grey hover:text-dark-red transition-colors duration-300"
+                className="px-6 py-3 rounded-lg education-button"
+                style={{
+                  background: 'linear-gradient(rgba(26, 38, 52, 0.8), rgba(26, 38, 52, 0.8)) padding-box, linear-gradient(45deg, #3B82F6, #A855F7) border-box',
+                  border: '2px solid transparent',
+                  color: 'white',
+                  transition: 'box-shadow 0.3s ease',
+                }}
+                onMouseEnter={(e) => e.target.style.boxShadow = '0 0 8px 2px rgba(113, 107, 246, 0.5)'}
+                onMouseLeave={(e) => e.target.style.boxShadow = 'none'}
               >
                 Send Message
               </button>
