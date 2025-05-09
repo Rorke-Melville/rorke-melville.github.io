@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen text-light-grey font-sans">
+    <div className="min-h-screen text-light-grey font-sans w-[95%] mx-auto sm:w-full">
       <CanvasBackground />
       <Navbar />
       <Hero />

@@ -153,6 +153,52 @@ const Education = () => {
             .education-button:hover {
               box-shadow: 0 0 8px 2px rgba(113, 107, 246, 0.5);
             }
+            @media (max-width: 640px) {
+              .carousel-container {
+                height: 400px;
+              }
+              .carousel-card {
+                max-width: 85%;
+                font-size: 0.9rem;
+                padding: 1rem;
+              }
+              .carousel-card.active {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: auto;
+                max-height: 100%;
+              }
+              .arrow-left {
+                left: 10px;
+              }
+              .arrow-right {
+                right: 10px;
+              }
+              .carousel-card h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+              }
+              .carousel-card p {
+                font-size: 0.8rem;
+              }
+              .carousel-card ul {
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+              }
+              .carousel-card li {
+                margin-bottom: 0.3rem;
+              }
+              .education-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+              }
+              .carousel-card img {
+                width: 100px;
+                height: 100px;
+                margin-top: 0.5rem;
+              }
+            }
           `}
         </style>
         <h2 className="text-4xl font-bold text-center mb-8">Education & Courses</h2>
@@ -170,7 +216,7 @@ const Education = () => {
             return (
               <div
                 key={index}
-                className={`bg-card-bg rounded-lg p-6 flex flex-col md:flex-row border-2 border-transparent shadow-lg ${cardClass}`}
+                className={`bg-card-bg rounded-lg border-2 border-transparent shadow-lg ${cardClass}`}
                 style={{
                   background:
                     'linear-gradient(#1A2634, #1A2634) padding-box, linear-gradient(45deg, #3B82F6, #A855F7) border-box',
@@ -179,9 +225,9 @@ const Education = () => {
                 onMouseLeave={() => setIsHovered(false)}
               >
                 <div className="md:w-3/4">
-                  <h3 className="text-xl font-semibold text-white text-left">{edu.degree}</h3>
+                  <h3 className="text-lg font-semibold text-white text-left">{edu.degree}</h3>
                   {edu.institution && (
-                    <p className="text-sm text-light-grey text-left">
+                    <p className="text-xs text-light-grey text-left">
                       {edu.institution} | {edu.period}
                     </p>
                   )}
@@ -189,8 +235,8 @@ const Education = () => {
                     <ul className="list-disc list-inside mt-2 text-light-grey">
                       {edu.courses.map((course, i) => (
                         <li key={i} className="text-left">
-                          <strong>{course.name}:</strong>
-                          <ul className="list-disc list-inside ml-4">
+                          <strong>{course.name}</strong>
+                          <ul className="list-disc list-inside ml-4 hidden md:block">
                             {course.details.map((detail, j) => (
                               <li key={j} className="text-left">{detail}</li>
                             ))}
@@ -203,7 +249,7 @@ const Education = () => {
                     href={edu.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-2 px-4 py-2 rounded-lg education-button"
+                    className="inline-block mt-2 px-3 py-1 text-sm rounded-lg education-button"
                   >
                     Visit Website
                   </a>

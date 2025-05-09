@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <FadeUp>
       <section id="hero" className="min-h-screen flex items-center justify-center text-light-grey">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-start px-4">
+        <div className="max-w-4xl mx-auto flex flex-col items-center md:flex-row md:items-start px-4">
           <div className="md:w-2/3 text-left">
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-left">
               Hi, I'm Rorke
@@ -15,7 +15,7 @@ const Hero = () => {
               I deliver modern, user-friendly, and scalable solutions for business success.
             </p>
           </div>
-          <div className="md:w-1/3 flex justify-center md:justify-end">
+          <div className="md:w-1/3 flex justify-center">
             <img src={ProfilePic} alt="Rorke's Profile" className="rounded-full w-52 h-52 object-cover shadow-lg"/>
           </div>
         </div>
