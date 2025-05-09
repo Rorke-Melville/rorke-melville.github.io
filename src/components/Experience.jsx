@@ -178,6 +178,30 @@ const Experience = () => {
             .timeline-description {
               margin-top: 8px;
             }
+            /* Mobile view added below (only change) */
+            @media (max-width: 768px) {
+              .timeline::before {
+                left: 8px;
+                transform: none;
+              }
+
+              .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left !important;
+                padding-left: 32px;
+                padding-right: 16px;
+                margin-bottom: 40px;
+              }
+
+              .timeline-card {
+                text-align: left;
+              }
+
+              .timeline-item .timeline-card::after {
+                display: none !important;
+              }
+            }
           `}
         </style>
         <h2 className="text-4xl font-bold mb-12 text-left">Experience</h2>
