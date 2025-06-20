@@ -64,8 +64,7 @@ To get started with the project, follow these steps:
 ## Features
 
 - Responsive design that adapts to different screen sizes.
-- Offcanvas navigation for easy access to different sections.
-- Progress bars to visually represent skills.
+- Navigation bar for easy access to different sections.
 - Sections for experience, education, and projects.
 
 ## Author
