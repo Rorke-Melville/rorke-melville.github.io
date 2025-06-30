@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-Site/static/css/main.5e56566c.css",
-    "main.js": "/Portfolio-Site/static/js/main.bcc079eb.js",
+    "main.css": "/Portfolio-Site/static/css/main.c89fff62.css",
+    "main.js": "/Portfolio-Site/static/js/main.b03eab81.js",
     "static/media/before2.png": "/Portfolio-Site/static/media/before2.8382ab96eaf478d2c55f.png",
     "static/media/after1.png": "/Portfolio-Site/static/media/after1.ca07cb3c6236af09ecb9.png",
     "static/media/before.png": "/Portfolio-Site/static/media/before.72cc55bd5612a20384f5.png",
@@ -16,11 +16,11 @@
     "static/media/udemylogo.png": "/Portfolio-Site/static/media/udemylogo.c305b60e48af9c61f219.png",
     "static/media/Mhs_badgeNB.png": "/Portfolio-Site/static/media/Mhs_badgeNB.86b31ba0b2ab01575ac7.png",
     "index.html": "/Portfolio-Site/index.html",
-    "main.5e56566c.css.map": "/Portfolio-Site/static/css/main.5e56566c.css.map",
-    "main.bcc079eb.js.map": "/Portfolio-Site/static/js/main.bcc079eb.js.map"
+    "main.c89fff62.css.map": "/Portfolio-Site/static/css/main.c89fff62.css.map",
+    "main.b03eab81.js.map": "/Portfolio-Site/static/js/main.b03eab81.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e56566c.css",
-    "static/js/main.bcc079eb.js"
+    "static/css/main.c89fff62.css",
+    "static/js/main.b03eab81.js"
   ]
 }
