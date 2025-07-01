@@ -107,6 +107,7 @@ const Navbar = () => {
     textRef.current.innerText = element.innerText;
   };
 
+  // Enhanced click handler with smooth scrolling and offset
   const handleNavClick = (e, index) => {
     const liEl = e.currentTarget;
     
@@ -127,6 +128,33 @@ const Navbar = () => {
     if (filterRef.current) {
       makeParticles(filterRef.current);
     }
+
+    // Let the default anchor behavior work, but add some delay to allow CSS scroll-padding to take effect
+    // If you want custom scrolling, you can uncomment the code below and comment out the return
+    
+    // Custom smooth scrolling with offset (uncomment if needed)
+    /*
+    e.preventDefault();
+    const targetId = navLinks[index].href.substring(1);
+    const targetElement = document.getElementById(targetId) || document.querySelector(navLinks[index].href);
+    
+    if (targetElement) {
+      const navbarHeight = 80;
+      const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+    */
+  };
+
+  // Mobile menu click handler
+  const handleMobileNavClick = (href) => {
+    setIsMenuOpen(false);
+    // Let default behavior work for mobile too
+    // The CSS scroll-padding-top will handle the offset
   };
 
   // Original scroll effect
@@ -169,7 +197,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Gooey animation styles */}
+      {/* Gooey animation styles + scroll offset fix */}
       <style>
         {`
           :root {
@@ -179,6 +207,12 @@ const Navbar = () => {
             --color-3: #7C3AED;
             --color-4: #6D28D9;
           }
+          
+          /* Add scroll padding to account for fixed navbar */
+          html {
+            scroll-padding-top: 80px; /* navbar height + extra padding */
+          }
+          
           .effect {
             position: absolute;
             opacity: 1;
@@ -392,7 +426,7 @@ const Navbar = () => {
                   <a
                     href={link.href}
                     className="text-white hover:text-[#A855F7] transition-colors duration-300 uppercase text-sm"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => handleMobileNavClick(link.href)}
                   >
                     {link.name}
                   </a>
