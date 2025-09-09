@@ -8,7 +8,7 @@ const Skills = () => {
     { name: 'PHP', icon: 'fab fa-php' },
     { name: 'React', icon: 'fab fa-react' },
     { name: 'SQL', icon: 'fas fa-database' },
-    { name: 'jQuery', icon: 'fas fa-code' },
+    { name: 'Vue', icon: 'fab fa-vuejs' },
     { name: 'CSS', icon: 'fab fa-css3-alt' },
     { name: 'Node.js', icon: 'fab fa-node' },
     { name: 'Bootstrap', icon: 'fab fa-bootstrap' },

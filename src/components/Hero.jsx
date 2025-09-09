@@ -12,7 +12,7 @@ const Hero = () => {
               Hi, I'm Rorke
             </h1>
             <p className="text-xl md:text-2xl mb-6 text-left">
-              I deliver modern, user-friendly, and scalable solutions for business success.
+              I craft innovative and user-focused solutions that empower business growth.
             </p>
           </div>
           <div className="md:w-1/3 flex justify-center">

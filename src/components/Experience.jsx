@@ -4,24 +4,24 @@ import FadeUp from './FadeUp';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Remote Software Developer',
-      company: 'Freelance',
-      dates: '2023 – Present',
-      description: 'Built a variety of personal projects using React, JavaScript, and PHP, focusing on developing practical, user-friendly solutions. These projects helped me strengthen my understanding of full-stack development, user-centered design, and the importance of thoughtful, clear communication when building applications.',
+      title: 'Founding Engineer',
+      company: 'Green Pips Trading',
+      dates: '2025 – Present',
+      description: 'Leading frontend development for an innovative trading education platform, using Vue to build dynamic, user-focused interfaces for courses, trading simulations, and community engagement. Partner with the CEO to shape technical strategy, delivering intuitive, high-performance solutions that empower retail traders and foster a vibrant learning community.',
     },
     {
       title: 'Junior Web Developer',
       company: 'Gelmar',
       dates: '2024 – Present',
-      description: 'Brought custom Magento 2 modules to life using PHP and HTML, contributing to meaningful improvements across both the backend and frontend. With little prior experience on the platform, I quickly found my footing and began building solutions that enhanced site functionality and elevated the user experience. This role has fueled my passion for clean, purposeful design and sharpened my drive to keep learning, creating, and growing as a developer.',
+      description: 'Brought custom Magento 2 modules to life using PHP, JS and HTML, contributing to meaningful improvements across both the backend and frontend. With little prior experience on the platform, I quickly found my footing and began building custom solutions that enhanced site functionality and elevated the user experience. This role has fueled my passion for clean, purposeful design and sharpened my drive to keep learning, creating, and growing as a developer.',
     },
     {
-      title: 'Sales & Coaching Experience',
-      company: 'Various',
-      dates: '2019 – 2024',
-      description: 'Cultivated strong teamwork, leadership, and communication skills through hands-on experience in sales and sports coaching. These roles taught me how to foster collaboration, adapt to different team dynamics, and stay focused on shared goals—skills that continue to shape how I approach problem-solving and contribute in tech environments.',
+      title: 'Remote Web Developer',
+      company: 'Freelance',
+      dates: '2023 – Present',
+      description: 'Built a variety of personal projects using React, JavaScript, TypeScript and PHP, focusing on developing practical, user-friendly solutions. These projects helped me strengthen my understanding of full-stack development, user-centered design, and the importance of thoughtful, clear communication when building applications.',
     },
-  ];
+];
 
   const [isVisible, setIsVisible] = useState(false);
   const [cardVisibility, setCardVisibility] = useState([false, false, false]); // One state for each card

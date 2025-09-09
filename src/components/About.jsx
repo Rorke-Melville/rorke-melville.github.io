@@ -4,9 +4,9 @@ import FadeUp from './FadeUp';
 const About = () => {
   const skillCards = [
     { title: 'UX/UI Design', icon: 'fas fa-paint-brush' },
-    { title: 'Full Stack Development', icon: 'fas fa-code' },
     { title: 'React Development', icon: 'fab fa-react' },
-    { title: 'JavaScript Frameworks', icon: 'fab fa-js' },
+    { title: 'Full Stack Development', icon: 'fas fa-code' },
+    { title: 'Vue Development', icon: 'fab fa-vuejs' },
   ];
 
   const [isVisible, setIsVisible] = useState(false);
@@ -179,7 +179,7 @@ const About = () => {
         <h2 className="text-5xl font-bold mb-6 text-left">About Me</h2>
         <div className="max-w-4xl">
           <p className="text-xl mb-8 text-left">
-            As a web developer with foundational experience in Adobe Magento 2 and user experience optimization, I bring a creative and proactive approach to solving technical challenges. My journey includes practical development work complemented by diverse experiences in coaching and management, which instilled strong principles of teamwork, leadership, and maintaining a positive focus on results. Valuing honesty and lifelong learning, I am committed to contributing solutions that genuinely improve processes and user engagement. My professional energy is now also directed towards software and full-stack development, leveraging my adaptability and enthusiasm to help forward-thinking organizations master new technologies and drive meaningful success.
+            I believe in the power of great code to solve real-world problems. As a skilled Frontend Engineer with a focus on Vue, React, JavaScript, and PHP, I am dedicated to crafting user-centric solutions that are both elegant and highly functional. My experience spans full-stack development, including creating custom Magento 2 modules for Gelmar and building innovative platforms like Green Pips Trading. I'm not just a developer; I'm a collaborative problem-solver who enjoys working with diverse teams to overcome challenges. I'm always ready to embrace new technologies and push the boundaries of what's possible, ensuring that every project I touch is built for success and future growth.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" style={{ perspective: '1000px' }}>
