@@ -1,6 +1,6 @@
 # React CV Site
 
-This project is a personal CV website built using React and styled with Tailwind CSS. It showcases my skills, experience, education, and projects in a modern and responsive layout. You can view the project by following this link [https://rorkemelville.com/]
+This project is a personal CV website built using React and styled with Tailwind CSS. It showcases my skills, experience, education, and projects in a modern and responsive layout. You can view the project by following this link https://rorkemelville.com/
 
 ## Project Structure
 
