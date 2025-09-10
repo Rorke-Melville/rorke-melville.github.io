@@ -204,7 +204,7 @@ const Experience = () => {
             }
           `}
         </style>
-        <h2 className="text-4xl font-bold mb-12 text-left">Experience</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center">Experience</h2>
         <ul className={`timeline ${isVisible ? 'visible' : ''}`}>
           {experiences.map((exp, index) => (
             <li key={index} className="timeline-item">

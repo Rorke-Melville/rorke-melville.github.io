@@ -1,10 +1,10 @@
 import React from 'react';
 import FadeUp from './FadeUp';
 // Import your project screenshots here
-// import GelmarScreenshot from './assets/gelmar-screenshot.png';
-// import GreenPipsScreenshot from './assets/greenpips-screenshot.png';
-// import MockProject1Screenshot from './assets/mock1-screenshot.png';
-// import MockProject2Screenshot from './assets/mock2-screenshot.png';
+ import Gelmar from './assets/Gelmar.png';
+ import GreenPipsTrading from './assets/GreenPipsTrading.png';
+ import AegisDynamics from './assets/AegisDynamicsCybersecurity.png';
+ import ModelLoft from './assets/ModelLoftScreenshot.png';
 
 const Projects = () => {
   const realWorldProjects = [
@@ -12,18 +12,18 @@ const Projects = () => {
       id: 1,
       title: "Gelmar",
       description: "Comprehensive website redesign focusing on user experience enhancement and visual sophistication. Implemented modern design principles and improved site navigation.",
-      image: "/path-to-gelmar-screenshot.png", // Replace with actual path
+      image: Gelmar,
       link: "https://gelmar.co.za",
-      technologies: ["React", "CSS", "JavaScript"],
+      technologies: ["PHP", "CSS", "JavaScript", "HTML"],
       type: "Website Redesign"
     },
     {
       id: 2,
       title: "Green Pips Trading",
       description: "Developed a modern trading platform interface with enhanced user experience and streamlined trading workflows.",
-      image: "/path-to-greenpips-screenshot.png", // Replace with actual path
+      image: GreenPipsTrading,
       link: "https://greenpipstrading.com",
-      technologies: ["React", "Node.js", "CSS"],
+      technologies: ["Vue", "Tailwind CSS", "Supabase"],
       type: "Trading Platform"
     }
   ];
@@ -31,23 +31,23 @@ const Projects = () => {
   const personalProjects = [
     {
       id: 3,
-      title: "Mock Company 1",
-      description: "A fictional e-commerce platform showcasing modern design patterns and responsive layouts with advanced filtering capabilities.",
-      image: "/path-to-mock1-screenshot.png", // Replace with actual path
-      githubLink: "https://github.com/yourusername/mock-project-1",
-      liveLink: "https://your-mock-project-1.netlify.app",
-      technologies: ["React", "Tailwind CSS", "API Integration"],
-      type: "E-commerce Platform"
+      title: "Aegis-Dynamics",
+      description: "Front-end web application designed to showcase features for a mock cybersecurity company. Developed using React for component-based architecture, Bootstrap for a streamlined UI, and Three.js for engaging data visualizations.",
+      image: AegisDynamics,
+      githubLink: "https://github.com/Rorke-Melville/Aegis-Dynamics",
+      liveLink: "https://rorkemelville.com/Aegis-Dynamics/",
+      technologies: ["React", "Bootstrap", "Three.js", "Lucide React"],
+      type: "Cybersecurity"
     },
     {
       id: 4,
-      title: "Mock Company 2",
-      description: "A corporate website template featuring elegant animations, modern typography, and optimized performance metrics.",
-      image: "/path-to-mock2-screenshot.png", // Replace with actual path
-      githubLink: "https://github.com/yourusername/mock-project-2",
-      liveLink: "https://your-mock-project-2.netlify.app",
-      technologies: ["React", "GSAP", "CSS3"],
-      type: "Corporate Website"
+      title: "The Model Loft",
+      description: "A mock portfolio website created to showcase high-quality web development skills. It features a fictional clay artist's work with beautiful galleries, interactive elements, and professional presentation. The site demonstrates expertise in modern React development, advanced animations, and responsive design.",
+      image: ModelLoft,
+      githubLink: "https://github.com/Rorke-Melville/The-Model-Loft",
+      liveLink: "https://rorkemelville.com/The-Model-Loft/",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "OGL"],
+      type: "Artist Portfolio"
     }
   ];
 
@@ -126,7 +126,7 @@ const Projects = () => {
       <section id="projects" className="py-16 max-w-6xl mx-auto text-light-grey px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-white">
-            Projects & <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Contributions</span>
+            Projects & Contributions
           </h2>
           <p className="text-light-grey max-w-2xl mx-auto">
             A showcase of my work ranging from real-world client projects to personal creative endeavors, 
