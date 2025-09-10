@@ -363,7 +363,9 @@ const Navbar = () => {
       >
         <div className="max-w-6xl mx-auto flex justify-between items-center px-4">
           <div className="flex items-center">
-            <img src={Logo} alt="Logo" className="h-20 w-20" />
+            <a href="/">
+              <img src={Logo} alt="Logo" className="h-20 w-20" />
+            </a>
           </div>
           
           {/* Desktop Menu with Gooey Animation */}

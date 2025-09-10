@@ -1,26 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.35d762d2.css",
-    "main.js": "/static/js/main.2570e6fb.js",
-    "static/media/before2.png": "/static/media/before2.8382ab96eaf478d2c55f.png",
-    "static/media/after1.png": "/static/media/after1.ca07cb3c6236af09ecb9.png",
-    "static/media/before.png": "/static/media/before.72cc55bd5612a20384f5.png",
+    "main.css": "/static/css/main.d5ed49b4.css",
+    "main.js": "/static/js/main.8335d72e.js",
+    "static/media/Gelmar.png": "/static/media/Gelmar.504791765fd144c856bf.png",
     "static/media/f3848e99-b88a-4b10-8824-cb5891e48fdf.webp": "/static/media/f3848e99-b88a-4b10-8824-cb5891e48fdf.e06c47fb51a29df1b419.webp",
-    "static/media/after2.png": "/static/media/after2.67c3cbf4dc8698c45b51.png",
-    "static/media/after10.png": "/static/media/after10.9ef35557c33873ba334c.png",
-    "static/media/after3.png": "/static/media/after3.5f3a5c17dc3b608b1413.png",
+    "static/media/GreenPipsTrading.png": "/static/media/GreenPipsTrading.cbf1cba4fb2e2414ab40.png",
+    "static/media/AegisDynamicsCybersecurity.png": "/static/media/AegisDynamicsCybersecurity.09287178f64182968c1f.png",
     "static/media/RM Logo-NB.png": "/static/media/RM Logo-NB.429dfaa0cb1ffc9837a0.png",
-    "static/media/before1.png": "/static/media/before1.a9aa66ea31e9573406c4.png",
-    "static/media/before4.png": "/static/media/before4.a04288ad0cb9f2b5f0cc.png",
+    "static/media/ModelLoftScreenshot.png": "/static/media/ModelLoftScreenshot.116a6ec8444c0c475234.png",
     "static/media/up_logo-650x479.png": "/static/media/up_logo-650x479.c0cfe8b85dfcbae1a71d.png",
     "static/media/udemylogo.png": "/static/media/udemylogo.c305b60e48af9c61f219.png",
     "static/media/Mhs_badgeNB.png": "/static/media/Mhs_badgeNB.86b31ba0b2ab01575ac7.png",
     "index.html": "/index.html",
-    "main.35d762d2.css.map": "/static/css/main.35d762d2.css.map",
-    "main.2570e6fb.js.map": "/static/js/main.2570e6fb.js.map"
+    "main.d5ed49b4.css.map": "/static/css/main.d5ed49b4.css.map",
+    "main.8335d72e.js.map": "/static/js/main.8335d72e.js.map"
   },
   "entrypoints": [
-    "static/css/main.35d762d2.css",
-    "static/js/main.2570e6fb.js"
+    "static/css/main.d5ed49b4.css",
+    "static/js/main.8335d72e.js"
   ]
 }
