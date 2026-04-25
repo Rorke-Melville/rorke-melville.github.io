@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.d5ed49b4.css",
-    "main.js": "/static/js/main.4fee36db.js",
+    "main.css": "/static/css/main.913639e6.css",
+    "main.js": "/static/js/main.cd26b2c8.js",
+    "static/media/LambertBrothers.png": "/static/media/LambertBrothers.886bff42e179ddb60f84.png",
     "static/media/Gelmar.png": "/static/media/Gelmar.504791765fd144c856bf.png",
     "static/media/f3848e99-b88a-4b10-8824-cb5891e48fdf.webp": "/static/media/f3848e99-b88a-4b10-8824-cb5891e48fdf.e06c47fb51a29df1b419.webp",
     "static/media/AegisDynamicsCybersecurity.png": "/static/media/AegisDynamicsCybersecurity.bf98e638e25f94f16a28.png",
-    "static/media/GreenPipsTrading.png": "/static/media/GreenPipsTrading.f9907951dd0fc8f499af.png",
+    "static/media/GreenPipsTrading.png": "/static/media/GreenPipsTrading.a575aafeab0ccdb07841.png",
     "static/media/RM Logo-NB.png": "/static/media/RM Logo-NB.429dfaa0cb1ffc9837a0.png",
     "static/media/ModelLoftScreenshot.png": "/static/media/ModelLoftScreenshot.116a6ec8444c0c475234.png",
     "static/media/up_logo-650x479.png": "/static/media/up_logo-650x479.c0cfe8b85dfcbae1a71d.png",
     "static/media/udemylogo.png": "/static/media/udemylogo.c305b60e48af9c61f219.png",
     "static/media/Mhs_badgeNB.png": "/static/media/Mhs_badgeNB.86b31ba0b2ab01575ac7.png",
     "index.html": "/index.html",
-    "main.d5ed49b4.css.map": "/static/css/main.d5ed49b4.css.map",
-    "main.4fee36db.js.map": "/static/js/main.4fee36db.js.map"
+    "main.913639e6.css.map": "/static/css/main.913639e6.css.map",
+    "main.cd26b2c8.js.map": "/static/js/main.cd26b2c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5ed49b4.css",
-    "static/js/main.4fee36db.js"
+    "static/css/main.913639e6.css",
+    "static/js/main.cd26b2c8.js"
   ]
 }
