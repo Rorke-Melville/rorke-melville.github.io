@@ -292,7 +292,7 @@ const Projects = () => {
       title: "Gelmar",
       description: "Comprehensive website redesign focusing on user experience enhancement and visual sophistication. Implemented modern design principles and improved site navigation.",
       image: Gelmar,
-      link: "https://gelmar.co.za",
+      link: "https://www.gelmar.co.za",
       technologies: ["PHP", "CSS", "JavaScript", "HTML"],
       type: "Website Redesign"
     },
