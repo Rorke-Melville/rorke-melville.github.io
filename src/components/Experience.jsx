@@ -12,14 +12,14 @@ const Experience = () => {
     {
       title: 'Junior Web Developer',
       company: 'Gelmar',
-      dates: '2024 – Present',
+      dates: '2024 – 2025',
       description: 'Brought custom Magento 2 modules to life using PHP, JS and HTML, contributing to meaningful improvements across both the backend and frontend. With little prior experience on the platform, I quickly found my footing and began building custom solutions that enhanced site functionality and elevated the user experience. This role has fueled my passion for clean, purposeful design and sharpened my drive to keep learning, creating, and growing as a developer.',
     },
     {
       title: 'Remote Web Developer',
       company: 'Freelance',
       dates: '2023 – Present',
-      description: 'Built a variety of personal projects using React, JavaScript, TypeScript and PHP, focusing on developing practical, user-friendly solutions. These projects helped me strengthen my understanding of full-stack development, user-centered design, and the importance of thoughtful, clear communication when building applications.',
+      description: 'Built a variety of projects using React, JavaScript, TypeScript and PHP, focusing on developing practical, user-friendly solutions. These projects helped me strengthen my understanding of full-stack development, user-centered design, and the importance of thoughtful, clear communication when building applications.',
     },
 ];
 
